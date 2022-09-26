@@ -14,9 +14,20 @@ public class Insertion
   /**
    * Returns the sorted array
    */
+  
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
-
+    for(int i = 1; i < arr.length; i++) {
+      int n = arr[i];
+      int j = i - 1;
+      
+      while (j >= 0 && arr[j] > n) {
+        arr[j + 1] = arr[j];
+        j = j - 1;
+      }
+      arr[j+1] = n;
+    }
+  return arr;
   }
   
   public static void main(String[] args) {
