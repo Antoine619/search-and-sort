@@ -15,7 +15,17 @@ public class Selection
    * Returns the sorted array
    */
   public static int[] sort(int[] arr) {
-    // Your algorithm goes here!
+    int n = arr.length;{
+      for (int i = 0; i < n-1; i++) {
+        int min = i;
+        for (int j = i+1; j < n; j++) {
+          if (arr[j] < arr[min]) {
+            min = j;
+      }
+    }
+  }
+    return arr;
+  }
     
   }
   
