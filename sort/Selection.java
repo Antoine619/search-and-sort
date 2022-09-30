@@ -15,7 +15,8 @@ public class Selection
    * Returns the sorted array
    */
   public static int[] sort(int[] arr) {
-    int n = arr.length;{
+    int n = arr.length;
+    
       for (int i = 0; i < n-1; i++) {
         int min = i;
         for (int j = i+1; j < n; j++) {
@@ -27,8 +28,6 @@ public class Selection
     return arr;
   }
     
-  }
-  
   public static void main(String[] args) {
     int[] arr = {53,85,93,25,39,27,42,5,24,45,33,51,5,80,4,7,91,
       31,66,71,32,19,79,58,61,82,89,63,7,4,50,10,48,24,75,19,22,

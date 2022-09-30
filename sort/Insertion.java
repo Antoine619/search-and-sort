@@ -16,17 +16,27 @@ public class Insertion
    */
   
   public static int[] sort(int[] arr) {
-    for(int i = 1; i < arr.length; i++) {
-      int n = arr[i];
+
+    int n = arr.length;
+
+    for (int i = 1; i < n; i++) {
       int j = i - 1;
-      
-      while (j >= 0 && arr[j] > n) {
-        arr[j + 1] = arr[j];
-        j = j - 1;
+      if (j <= 0) {
+        if (arr[i] < arr[j]) {
+          j--;
+        }
       }
-      arr[j+1] = n;
+
+      int temp = arr[j];
+      int k = i;
+
+      if (k > j + 1) {
+        arr[k] = arr[k-1];
+        k--;
+      }
+      arr[k] = temp;
     }
-  return arr;
+    return arr;
   }
   
   public static void main(String[] args) {
